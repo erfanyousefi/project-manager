@@ -1,11 +1,13 @@
+const { AllRoutes } = require("./router/router");
+
 module.exports = class Application {
     #express = require("express");
     #app = this.#express();
     constructor(PORT, DB_URL){
         this.configDatabase(DB_URL)
         this.configApplication()
-        this.createServer(PORT)
         this.createRoutes()
+        this.createServer(PORT)
         this.errorHandler()
     }
     configApplication(){
@@ -52,5 +54,12 @@ module.exports = class Application {
                 message : "this is a new Express application"
             })
         })
+        this.#app.use(AllRoutes)
+        // this.#app.use((err, req, res, next) => {
+        //     try {
+        //     } catch (error) {
+        //         next(error)
+        //     }
+        // })
     }
 }
