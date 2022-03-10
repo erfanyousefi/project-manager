@@ -1,5 +1,4 @@
 const { AllRoutes } = require("./router/router");
-
 module.exports = class Application {
     #express = require("express");
     #app = this.#express();
