@@ -4,6 +4,6 @@ Authorization: Bearer {{$dotenv token}}
 Content-Type: application/json
 
 {
-  "title" : "",
-  "foo" : "bar"
+  "title" : "title of new Project",
+  "text" : "text of new Project for prject manager of node js course"
 }
