@@ -1,3 +1,23 @@
 ### get User Profile
-http://localhost:3000/user/profile
+GET http://localhost:3000/user/profile
 Authorization: Bearer {{$dotenv token}}
+
+### edit User Profile
+Post http://localhost:3000/user/profile
+Authorization: Bearer {{$dotenv token}}
+Content-Type: application/json
+
+{
+    "first_name" : "Erfan",
+    "last_name" : "Yousefi",
+    "skills" : ["programmin", "nodejs", "express.js"]
+}
+### dfrgv User Profile
+Post http://localhost:3000/project/create
+Authorization: Bearer {{$dotenv token}}
+Content-Type: application/json
+
+{
+  "title" : "",
+  "foo" : "bar"
+}

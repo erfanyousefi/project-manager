@@ -1,27 +1,15 @@
-class ProjectController{
-    createProject(){
 
-    }
-    getAllProject(){
+class ProjectController {
+  async createProject(req, res, next) {
 
-    }
-    getProjectById(){
-
-    }
-    getAllProjectOfTeam(){
-
-    }
-    getProjectOfUser(){
-
-    }
-    updateProject(){
-
-    }
-    removeProject(){
-
-    }
-
+  }
+  getAllProject() {}
+  getProjectById() {}
+  getAllProjectOfTeam() {}
+  getProjectOfUser() {}
+  updateProject() {}
+  removeProject() {}
 }
 module.exports = {
-    ProjectController : new ProjectController()
-}
+  ProjectController: new ProjectController(),
+};

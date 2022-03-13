@@ -20,7 +20,6 @@ class AuthController{
     async login(req, res, next){
         try {
             const {username, password} = req.body;
-            console.log(req.headers)
             const user = await UserModel.findOne({username});
             if(!user) throw {status : 401, message : "نام کاربری یا رمز عبور اشتباه میباشد"}
             const compareResult = bcrypt.compareSync(password, user.password);
