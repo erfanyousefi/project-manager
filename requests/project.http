@@ -13,11 +13,22 @@ Authorization: Bearer {{$dotenv token}}
 Content-Type: application/json
 
 ### get project by id
-Get http://localhost:3000/project/
+Get http://localhost:3000/project/622e622430bfc237473a5822
 Authorization: Bearer {{$dotenv token}}
 Content-Type: application/json
 
 ### remove project by id
-Delete http://localhost:3000/project/
+Delete http://localhost:3000/project/remove/622e15d7edc7f5732a937aaf
 Authorization: Bearer {{$dotenv token}}
 Content-Type: application/json
+
+### edit project by id
+Put http://localhost:3000/project/edit/622e622430bfc237473a5822
+Authorization: Bearer {{$dotenv token}}
+Content-Type: application/json
+
+{
+  "title" : "",
+  "text" : "",
+  "tags" : ["", ""]
+}
