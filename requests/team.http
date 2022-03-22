@@ -1,0 +1,44 @@
+### create project
+Post http://localhost:3000/team/create
+Authorization: Bearer {{$dotenv token}}
+Content-Type: application/json
+
+{
+  "name" : "title of new Project",
+  "description" : "text of new Project for prject manager of node js course",
+  "username" : "fuydfhf"
+}
+### get all teams
+Get http://localhost:3000/team/list
+Authorization: Bearer {{$dotenv token}}
+Content-Type: application/json
+
+### get team by id
+Get http://localhost:3000/team/6232de43ef4cf76c19fe22f0
+Authorization: Bearer {{$dotenv token}}
+Content-Type: application/json
+
+### get my team
+Get http://localhost:3000/team/me
+Authorization: Bearer {{$dotenv token}}
+Content-Type: application/json
+
+### remove project by id
+Delete http://localhost:3000/team/remove/6232de43ef4cf76c19fe22f0
+Authorization: Bearer {{$dotenv token}}
+Content-Type: application/json
+
+### edit team by id
+Put http://localhost:3000/team/update/622e622430bfc237473a5822
+Authorization: Bearer {{$dotenv token}}
+Content-Type: application/json
+
+{
+  "name" : "erfan Team A",
+  "description" : "best developers team",
+}
+
+### invite user to team
+Get http://localhost:3000/team/invite/6232df7f76ac8207c487f9eb/erfanyousefi2
+Authorization: Bearer {{$dotenv token}}
+Content-Type: application/json

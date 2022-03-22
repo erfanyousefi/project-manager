@@ -8,6 +8,7 @@ class ProjectController {
   }
   async createProject(req, res, next) {
     try {
+      console.log(req.body)
       const {title, text, image, tags } = req.body;
       console.log(tags);
       const owner = req.user._id

@@ -16,6 +16,6 @@ Content-Type: application/json
 Authorization: Bearer {{$dotenv token}}
 
 {
-    "username" : "erfanyousefi2",
+    "username" : "erfanyousefi",
     "password" : "123456"
 }
