@@ -6,7 +6,7 @@ Content-Type: application/json
 {
   "name" : "title of new Project",
   "description" : "text of new Project for prject manager of node js course",
-  "username" : "fuydfhf"
+  "username" : "myTeam"
 }
 ### get all teams
 Get http://localhost:3000/team/list
@@ -29,13 +29,13 @@ Authorization: Bearer {{$dotenv token}}
 Content-Type: application/json
 
 ### edit team by id
-Put http://localhost:3000/team/update/622e622430bfc237473a5822
+Put http://localhost:3000/team/update/623a40a2ece90c631a3b5474
 Authorization: Bearer {{$dotenv token}}
 Content-Type: application/json
 
 {
   "name" : "erfan Team A",
-  "description" : "best developers team",
+  "description" : "best developers team"
 }
 
 ### invite user to team

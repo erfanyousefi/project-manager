@@ -55,9 +55,34 @@ class TeamController {
   async getMyTeams(req, res, next) {
     try {
       const userID = req.user._id;
-      const teams = await TeamModel.find({
-        $or: [{ owner: userID }, { users: userID }],
-      });
+      const teams = await TeamModel.aggregate([
+        {
+          $match : {
+            $or: [{ owner: userID }, { users: userID }]
+          },
+        },
+        {
+          $lookup : {
+            from : "users",
+            localField : "owner",
+            foreignField : "_id",
+            as : "owner"
+          }
+        },
+        {
+          $project : {
+            "owner.roles" : 0,
+            "owner.password" : 0,
+            "owner.token" : 0,
+            "owner.teams" : 0,
+            "owner.skills" : 0,
+            "owner.inviteRequests" : 0,
+          }
+        },
+        {
+          $unwind : "$owner"
+        }
+      ]);
       return res.status(200).json({
         status: 200,
         success: true,
